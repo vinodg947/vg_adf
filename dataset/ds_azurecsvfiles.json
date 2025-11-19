@@ -1,0 +1,56 @@
+{
+	"name": "ds_azurecsvfiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azureblob",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_directory": {
+				"type": "String"
+			},
+			"p_filename": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().p_filename",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().p_directory",
+					"type": "Expression"
+				},
+				"container": "container"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "   CustomerID",
+				"type": "String"
+			},
+			{
+				"name": "FirstName",
+				"type": "String"
+			},
+			{
+				"name": "LastName",
+				"type": "String"
+			},
+			{
+				"name": "Email",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

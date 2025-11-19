@@ -1,0 +1,9 @@
+{
+	"name": "jobbydec-datafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c8109fb2-fabd-4a4d-9584-f860f217b369",
+		"tenantId": "d901c625-598b-4850-b6bc-a0c6be2b1d28"
+	}
+}
