@@ -97,6 +97,7 @@
 				"activities": [
 					{
 						"name": "Get Metadata1",
+						"description": "to get at highleavel",
 						"type": "GetMetadata",
 						"dependsOn": [],
 						"policy": {
