@@ -99,6 +99,7 @@
 						},
 						{
 							"name": "If Condition1",
+							"description": "checking if the source type is file",
 							"type": "IfCondition",
 							"dependsOn": [
 								{
